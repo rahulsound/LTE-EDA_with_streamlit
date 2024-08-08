@@ -8,3 +8,4 @@ streamlit-pandas-profiling
 openpyxl
 xlrd
 plotly==5.23.0
+tqdm>=4.48.2, <5
