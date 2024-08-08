@@ -1,9 +1,8 @@
-numpy
-pandas
-scipy
 matplotlib==3.7.0
-streamlit
-ydata-profiling
-streamlit-pandas-profiling
-openpyxl
-xlrd
+numpy==1.24.3
+pandas==2.0.3
+plotly==5.9.0
+scikit_learn==1.3.0
+streamlit==1.31.0
+streamlit_pandas_profiling==0.1.3
+ydata_profiling==4.7.0
