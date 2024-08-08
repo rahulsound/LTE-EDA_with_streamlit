@@ -102,24 +102,24 @@ def run_profiler():
             uploaded_file = st.file_uploader("Upload your input CSV file", type=["csv"])
             if uploaded_file is not None:
                 df = pd.read_csv(uploaded_file)
-            st.write(df.head())
-            st.title('Data Profiler is generating report::')
-            #pr = ProfileReport(df, minimal=True)#explorative=True
-            pr = ProfileReport(df, explorative=True,                                    
-                                            correlations={
-                                            "pearson": {"calculate": True},
-                                            "spearman": {"calculate": True},
-                                            "kendall": {"calculate": False},
-                                            "phi_k": {"calculate": False},
-                                        })#explorative=True
-            pr.config.plot.scatter_threshold = 25000
-            st_profile_report(pr)
-            df.to_csv('upload.csv')
-            st.session_state['count']+=1
-            st.session_state['df'] = df
-            st.session_state['upload'] = 1
-            st.session_state['last_action'] = 'upload'
-            return df   
+                st.write(df.head())
+                st.title('Data Profiler is generating report::')
+                #pr = ProfileReport(df, minimal=True)#explorative=True
+                pr = ProfileReport(df, explorative=True,                                    
+                                                correlations={
+                                                "pearson": {"calculate": True},
+                                                "spearman": {"calculate": True},
+                                                "kendall": {"calculate": False},
+                                                "phi_k": {"calculate": False},
+                                            })#explorative=True
+                pr.config.plot.scatter_threshold = 25000
+                st_profile_report(pr)
+                df.to_csv('upload.csv')
+                st.session_state['count']+=1
+                st.session_state['df'] = df
+                st.session_state['upload'] = 1
+                st.session_state['last_action'] = 'upload'
+                return df   
         else:
             st.session_state['count'] = 0
             st.session_state['df'] = None
