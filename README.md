@@ -16,6 +16,6 @@
             -   Toogle the [**Explore**] button in the [**EDA Tab**] to visualize interesting correlation plots.
             -   If you happen to have a clean 'csv' file, use the "Upload your own file" radio button under [**Profile Tab**].   
 
-## Try out a live demo here: https://rahulsound-4g-5g-eda.streamlit.app/ 
-#### If it doesn't work, I am fixing something :)
-## My homepage: https://rahulsound.streamlit.app/ 
+### Try out a live demo here: https://rahulsound-4g-5g-eda.streamlit.app/ 
+##### If it doesn't work, I am fixing something :)
+### My homepage: https://rahulsound.streamlit.app/ 
