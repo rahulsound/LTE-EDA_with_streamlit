@@ -6,6 +6,8 @@ import streamlit as st
 from ydata_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 import plotly.express as px
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 #from Telecom_EDA import *
 st.set_page_config(page_title='Telecom EDA ',layout='wide')
@@ -60,11 +62,24 @@ def run_additional_eda(df):
         fig = px.scatter(data_frame=df, x=num_selection1, y=num_selection2, color=cat_selection)
         st.plotly_chart(fig) 
     with col2:
-        cat_selectiona = st.selectbox("Select criterion to plot fig2:",num_cols)
+        charts = ('box', 'violin', 'kdeplot', 'histogram')
+        chart_selection = st.selectbox('Choose the chart type', charts)
+        # cat_selectiona = st.selectbox("Select criterion to plot fig2:",num_cols)
         num_selectiona1 = st.selectbox("Select feature 1 to plot fig2:", num_cols)
         num_selectiona2 = st.selectbox("Select feature 2 to plot fig2:", num_cols)
-        figa = px.scatter(data_frame=df, x=num_selectiona1, y=num_selectiona2, color=cat_selectiona)
-        st.plotly_chart(figa) 
+        fig, ax = plt.subplots()
+        if chart_selection == 'box':
+            sns.boxplot(x=num_selectiona1, y=num_selectiona2, data=df, ax=ax)
+        elif chart_selection == 'violin':
+            sns.violinplot(x=num_selectiona1, y=num_selectiona2, data=df, ax=ax)
+        elif chart_selection == 'kdeplot':
+            sns.kdeplot(x=num_selectiona1, y=num_selectiona2, data=df, ax=ax)
+        else:
+            sns.histplot(x=num_selectiona1, y=num_selectiona2, data=df, ax=ax)
+        st.pyplot(fig)
+
+        # figa = px.scatter(data_frame=df, x=num_selectiona1, y=num_selectiona2, color=cat_selectiona)
+        # st.plotly_chart(figa) 
 
 
 @st.fragment()
@@ -138,6 +153,7 @@ def run_eda():
             st.subheader('Illustration file:')
             if os.path.isfile('illus.csv'):
                 df1 = pd.read_csv('illus.csv')
+                df1 = df1[:500]
                 run_additional_eda(df1)
             else:
                 st.write("Please run 'Profile' on demo file first... ")
