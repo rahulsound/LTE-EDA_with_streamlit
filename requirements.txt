@@ -2,3 +2,4 @@ pandas
 pandas-profiling
 streamlit
 streamlit-pandas-profiling
+ydata_profiling
