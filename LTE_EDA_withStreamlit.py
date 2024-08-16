@@ -226,8 +226,9 @@ if 'count' not in st.session_state:
 st.divider()
 st.subheader('How to use this page:')
 st.markdown('''
-            -   Toggle the [**Run Profiler**] button in the [**Profile Tab**] below to explore the output of pandas-profiling on the above dataset.
-            -   Toogle the [**Explore**] button in the [**EDA Tab**] to visualize interesting correlation plots.
+            -   Below, you would see two tabs: [**Profile Tab**] and [**EDA Tab**]. You can click to toggle between the two tabs.
+            -   Enable the [**Run Profiler**] button in the [**Profile Tab**] below to explore the output of pandas-profiling on the above dataset.
+            -   Enable the [**Explore**] button in the [**EDA Tab**] to visualize interesting correlation plots.
             -   If you happen to have a clean 'csv' file, use the "Upload your own file" radio button under [**Profile Tab**].   
             ''')
 st.write(':red[Note1:] The profiler needs to crunch data and generate reports, it might take ~30s depending on the size of the data.')
