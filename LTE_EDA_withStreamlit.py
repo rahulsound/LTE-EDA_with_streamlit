@@ -176,7 +176,7 @@ st.markdown('''
                 
             ''')
 run_sub_header()
-st.markdown('''### :blue[Exploratory Analysis of Telecom dataset made easy with a few lines of code]", anchor='#TelecomDataPlay''')
+st.header(":blue[Exploratory Analysis of Telecom dataset made easy with a few lines of code]", anchor='#TelecomDataPlay')
 st.markdown('''
 ### :blue[Bring your own data and play with it right here! ]   
 ---        
