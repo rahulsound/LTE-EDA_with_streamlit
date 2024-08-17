@@ -21,7 +21,7 @@
             -   The 'profiler' has to be run before 'exploring'.
             -   If you happen to have a clean 'csv' file, use the "Upload your own file" radio button under [**Profile Tab**].   
 ---
-![Demo](./demo-fast.gif)
+![Demo](./demo-ab.gif)
 
 ### Try out a live demo here: https://rahulsound-4g-5g-eda.streamlit.app/ 
 ---
