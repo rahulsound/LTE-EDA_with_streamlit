@@ -11,10 +11,12 @@
                 -   How to use pandas-profiling with Streamlit: https://github.com/dataprofessor/eda-app 
                 
 ### 'How to use this page:'
-
-            -   Toggle the [**Run Profiler**] button in the [**Profile Tab**] below to explore the output of pandas-profiling on the above dataset.
-            -   Toogle the [**Explore**] button in the [**EDA Tab**] to visualize interesting correlation plots.
+            -   Below, you would see two tabs: [**Profile Tab**] and [**EDA Tab**]. You can click to toggle between the two tabs.
+            -   In the [**Profile Tab**] below, enable the [**Run Profiler**] button to explore the output of pandas-profiling on the above dataset.
+            -   In the [**EDA Tab**], enable the [**Explore**] button  to visualize interesting correlation plots.
+            -   The 'profiler' has to be run before 'exploring'.
             -   If you happen to have a clean 'csv' file, use the "Upload your own file" radio button under [**Profile Tab**].   
+![Demo](./demo-fast.gif)
 
 ### Try out a live demo here: https://rahulsound-4g-5g-eda.streamlit.app/ 
 ##### If it doesn't work, I am fixing something :)
