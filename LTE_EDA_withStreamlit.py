@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #from Telecom_EDA import *
-st.set_page_config(page_title='Telecom EDA ',layout='wide')
+st.set_page_config(page_title='Telecom EDA ',layout='wide', initial_sidebar_state = 'expanded')
 import os
 import sys
 
